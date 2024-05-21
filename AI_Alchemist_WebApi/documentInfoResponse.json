@@ -1,0 +1,68 @@
+{
+    "documents": [
+        {
+            "Id": "1",
+            "UniqueId": "73a94449-a388-49c4-86ab-28876ba133a6",
+            "Name": "Invoice PaintShop 0030.pdf",
+            "Status": "Uploaded",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "2",
+            "UniqueId": "4645defa-0990-4aae-aedc-14572b799ef2",
+            "Name": "document1.pdf",
+            "Status": "Posted",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "3",
+            "UniqueId": "69823d45-aa49-4b0f-8ba9-3c024636230c",
+            "Name": "document2.pdf",
+            "Status": "Authorized",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "4",
+            "UniqueId": "a97b62f9-2d16-45a8-84ee-210f5dc2d31a",
+            "Name": "Deli XL 8A6948.pdf",
+            "Status": "Merged",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "5",
+            "UniqueId": "7b35b594-66a3-4a68-8e9e-b13ac4a5ae0b",
+            "Name": "MKB-Afval_210362.pdf",
+            "Status": "Split",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "6",
+            "UniqueId": "ba84742c-85e4-4852-a44b-6cfddc3f59ed",
+            "Name": "Download (1)_49.pdf",
+            "Status": "Tagged",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "7",
+            "UniqueId": "16d3975e-60c9-49c4-a6fd-814ef519ecf2",
+            "Name": "document3.pdf",
+            "Status": "Merged",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        },
+        {
+            "Id": "8",
+            "UniqueId": "ab5465f2-fa13-4afc-8b11-96fc74712b80",
+            "Name": "Download (1)_21.pdf",
+            "Status": "Aithorized after posting",
+            "DateCreated": "existing@example.com",
+            "culture": "en-GB"
+        }
+    ]
+}

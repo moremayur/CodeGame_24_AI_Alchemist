@@ -1,3 +1,4 @@
+using Google.Api;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,23 @@ builder.Services
     .AddHealthChecks()
     .AddSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
 
+builder.Services.Configure<IISServerOptions>(options =>
+{
+    options.AllowSynchronousIO = true;
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        p => p.AllowAnyOrigin().
+            AllowAnyHeader().
+            AllowAnyMethod()
+            );
+});
+
 var app = builder.Build();
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 
