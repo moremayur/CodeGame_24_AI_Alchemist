@@ -28,8 +28,6 @@ namespace AI_Alchemist_WebApi.Controllers
 
             var response = new WebhookResponse();
 
-            string name = "Jeffson Library";
-
             StringBuilder sb = new StringBuilder();
 
             if (askingDocumentName)
@@ -38,18 +36,24 @@ namespace AI_Alchemist_WebApi.Controllers
 
                 JObject jObject = JObject.Load(new JsonTextReader(System.IO.File.OpenText("documentInfoResponse.json")));
 
-                if (jObject != null) {
-                    JArray resources = (JArray)jObject["documents"];
+                JArray resources = (JArray)jObject["documents"];
 
-                    JToken resObj = resources.Where(obj => obj["Name"].Value<string>() == documentName).SingleOrDefault();
+                JToken resObj = resources.Where(obj => obj["Name"].Value<string>() == documentName).SingleOrDefault();
 
-                    sb.Append((resObj != null) ? "and status is " + resObj["Status"].ToString() : string.Empty);
+                if (resObj != null)
+                {
+                    sb.Append("and status is " + resObj["Status"].ToString());
+                }
+                else
+                {
+                    sb.Clear();
+                    sb.Append("This document:" + documentName + " is not found!");
                 }
             }
 
             if (sb.Length == 0)
             {
-                sb.Append("Greetings from our Webhook API!");
+                sb.Append("Not understand, please check request..");
             }
 
             response.FulfillmentText = sb.ToString();
