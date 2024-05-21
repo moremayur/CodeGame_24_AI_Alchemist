@@ -12,9 +12,9 @@ builder.Services.AddDbContext<DbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
 });
 
-builder.Services
-    .AddHealthChecks()
-    .AddSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
+//builder.Services
+//    .AddHealthChecks()
+//    .AddSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
 
 builder.Services.Configure<IISServerOptions>(options =>
 {
@@ -43,7 +43,7 @@ app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
-    endpoints.MapHealthChecks("/health");
+    // endpoints.MapHealthChecks("/health");
 });
 
 app.MapControllers();
