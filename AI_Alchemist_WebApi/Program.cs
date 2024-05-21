@@ -1,5 +1,6 @@
 using Google.Api;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,11 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<DbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
+});
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v2", new OpenApiInfo { Title = "AI_Alchemist_WebApi", Version = "v2" });
 });
 
 //builder.Services
@@ -39,6 +45,13 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSwagger();
+
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v2/swagger.json", "AI_Alchemist_WebApi");
+});
 
 app.UseEndpoints(endpoints =>
 {
