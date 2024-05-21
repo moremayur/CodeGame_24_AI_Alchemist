@@ -11,8 +11,9 @@ builder.Services.AddDbContext<DbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
 });
 
-builder.Services.AddHealthChecks();
-
+builder.Services
+    .AddHealthChecks()
+    .AddSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
 
 var app = builder.Build();
 
