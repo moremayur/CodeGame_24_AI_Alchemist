@@ -23,8 +23,8 @@ namespace AI_Alchemist_WebApi.Controllers
             }
 
             var pas = request.QueryResult.Parameters;
-            var askingDocumentName = pas.Fields.ContainsKey("document-name") && pas.Fields["document-name"].ToString().Replace('\"', ' ').Trim().Length > 0;
-            var documentName = pas.Fields["document-name"].ToString().Replace('\"', ' ').Trim();
+            var askingDocumentName = pas.Fields.ContainsKey("documentname") && pas.Fields["documentname"].ToString().Replace('\"', ' ').Trim().Length > 0;
+            var documentName = pas.Fields["documentname"].ToString().Replace('\"', ' ').Trim();
 
             var response = new WebhookResponse();
 
@@ -47,7 +47,7 @@ namespace AI_Alchemist_WebApi.Controllers
                 else
                 {
                     sb.Clear();
-                    sb.Append("This document:" + documentName + " is not found!");
+                    sb.Append("This " + documentName + " is not found!");
                 }
             }
 
