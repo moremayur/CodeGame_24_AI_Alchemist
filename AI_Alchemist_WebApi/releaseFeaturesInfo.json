@@ -1,0 +1,24 @@
+{
+    "releases": [
+        {
+            "number": "latest",
+            "features": [ "FeatureToggle for Archive Sorting", "New version support integration with AAA enabled offices" ]
+        },
+        {
+            "number": "1.1",
+            "features": [ "Supports automatic posting conditions", "Some minor fixes for Archive screen" ]
+        },
+        {
+            "number": "1.2",
+            "features": [ "Some minor fixes for Archive screen & other issues" ]
+        },
+        {
+            "number": "2.1",
+            "features": [ "Redrive mechanisium for SMIP deadletter queue", "improve archive screen performance", "sonarqube improvements for backoffice" ]
+        },
+        {
+            "number": "3.1",
+            "features": [ "The new FE for user settings has been added as part of this release", "Some minor fixes"]
+        }
+    ]
+}
