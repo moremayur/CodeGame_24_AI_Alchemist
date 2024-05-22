@@ -96,7 +96,7 @@ namespace AI_Alchemist_WebApi.Controllers
                         if (resObj != null)
                         {
                             var features = resObj["features"];
-                            sb.Append("\n" + string.Join(',', features));
+                            sb.Append("\n" + string.Join(System.Environment.NewLine, features));
                         }
                         else
                         {

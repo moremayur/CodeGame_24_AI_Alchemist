@@ -8,10 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<DbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
-});
+//builder.Services.AddDbContext<DbContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
+//});
 
 builder.Services.AddSwaggerGen(c =>
 {
