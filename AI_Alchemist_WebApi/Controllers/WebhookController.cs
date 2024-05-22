@@ -59,7 +59,7 @@ namespace AI_Alchemist_WebApi.Controllers
                         int cnt = 1;
                         foreach (JToken doc in documents)
                         {
-                            sb.Append(cnt + ".<br/>" + "DocumentName: " + doc["Name"].ToString() + "<br/>Status: " + doc["Status"].ToString() + "<br/>");
+                            sb.Append(cnt + ".\n" + "DocumentName: " + doc["Name"].ToString() + "\nStatus: " + doc["Status"].ToString() + "\n");
                             cnt++;
                         }
                     }
